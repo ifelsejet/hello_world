@@ -41,7 +41,9 @@ class SecretPage(webapp2.RequestHandler):
 
 class AboutPage(webapp2.RequestHandler):
     def get(self):
-        self.response.write("Hola, mi nombre es Jet")
+        #self.response.write("Hola, mi nombre es Jet")
+        meTemplate = jinja_env.get_template("me.html")
+        self.response.write(meTemplate.render())
 
 # the app configuration section
 app = webapp2.WSGIApplication([
