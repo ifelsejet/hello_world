@@ -35,7 +35,9 @@ class MainPage(webapp2.RequestHandler):
 
 class SecretPage(webapp2.RequestHandler):
     def get(self):
-        self.response.write("Shh! This is a secret entrance")
+        #self.response.write("Shh! This is a secret entrance")
+        secretTemplate = jinja_env.get_template("secret.html")
+        self.response.write(secretTemplate.render())
 
 class AboutPage(webapp2.RequestHandler):
     def get(self):
