@@ -7,7 +7,16 @@ import logging
 class MainPage(webapp2.RequestHandler):
     def get(self): #for a get request
         logging.info("In hello handler")
-        self.response.write('Hello, World!') #the response
+        self.response.write("<h2> Hello CSSI <h2>")
+        self.response.write("<i> I hope you're having a fun week <i>")
+        self.response.write("<ul>")
+        self.response.write("<li> Robot Controller")
+        self.response.write("<li> Pterodactyl")
+        self.response.write("<li> Evolution")
+        self.response.write("<ul>")
+
+
+        #self.response.write('<b>Hello, <i>CSSI!<i><b>') #the response
 
 class SecretPage(webapp2.RequestHandler):
     def get(self):
