@@ -16,7 +16,7 @@ class MainPage(webapp2.RequestHandler):
     def get(self): #for a get request
         logging.info("In hello handler")
         #Step 3: Use the Jinja environment to get our HTML
-        template = jinja_env.get_template("hello.html")
+        template = jinja_env.get_template("me.html")
         self.response.write(template.render())
 
 
@@ -39,15 +39,16 @@ class SecretPage(webapp2.RequestHandler):
         secretTemplate = jinja_env.get_template("secret.html")
         self.response.write(secretTemplate.render())
 
-class AboutPage(webapp2.RequestHandler):
-    def get(self):
-        #self.response.write("Hola, mi nombre es Jet")
-        meTemplate = jinja_env.get_template("me.html")
-        self.response.write(meTemplate.render())
+class FamilyPage(webapp2.RequestHandler):
+    def get(self): #for a get request
+        #Step 3: Use the Jinja environment to get our HTML
+        template = jinja_env.get_template("fam.html")
+        self.response.write(template.render())
 
 # the app configuration section
 app = webapp2.WSGIApplication([
     ('/', MainPage), #this maps the root url to the Main Page Handler
     ('/secretentrance', SecretPage),
-    ('/about', AboutPage)
+    ('/fam', FamilyPage),
+
 ], debug=True)

@@ -1,0 +1,18 @@
+body {
+  background-color: lightblue;
+}
+
+h1{
+  border: 5px solid white;
+  color: purple;
+
+}
+
+h2{
+  border-radius:25px;
+  border: 5px solid red;
+}
+
+p{
+  font-family: sans-serif;
+}
