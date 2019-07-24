@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <ul>
+      <!-- Jinja For Loop -->
+      <!-- cssi is the template var -->
+      {% for student in cssi %}
+      <li><a href="/student?student_name={{student['name']}}&student_uni={{student['university']}}">
+        {{student['name']}}
+      </a></li>
+      {% endfor %}
+    <!---  <li><a href="/student?student_name=Dangely&student_uni=Princeton">Dangely</a></li> -->
+    </ul>
+  </body>
+</html>
